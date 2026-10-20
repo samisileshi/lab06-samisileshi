@@ -11,10 +11,16 @@ import tkinter as tk
 
 
 def calculate():
-    # TODO: read the bill amount with entry.get() and turn it into a float. Work out
-    #   a 15% tip and the total (bill + tip). Then show them, e.g.:
-    #       result.config(text="Tip: $1.50   Total: $11.50")
-    pass
+    try:
+        preTipBill = float(entry.get())
+        Tip = preTipBill * 0.15
+        totalBill = preTipBill + Tip
+
+        result.config(text=f"Tip: ${Tip: .2f} Total: ${totalBill: .2f}")
+    except ValueError:
+        result.config(text="Please enter a correct numerical value!")
+
+
 
 
 root = tk.Tk()

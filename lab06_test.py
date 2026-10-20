@@ -41,3 +41,7 @@ def test_invalid_choice():
     out = feed("9\n4\n")                   # an option that isn't on the menu, then quit
     assert "Invalid choice" in out
     assert "Goodbye" in out
+test_deposit_updates_balance()
+test_withdraw_too_much_is_blocked()
+test_withdraw_too_much_is_blocked()
+test_invalid_choice()
