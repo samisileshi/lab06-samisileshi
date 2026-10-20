@@ -19,20 +19,26 @@ def main():
             depAmount = input("Deposit Amount: ").strip()
             balance += float(depAmount)
             print(f"New Balance: {balance: .2f}")
+            time.sleep(1)
         elif choice == "2":
            withAmount = input("Withdrawl Amount: ").strip()
            if float(withAmount) > balance:
                print("Insufficient funds")
+               time.sleep(1)
                continue
            balance -= float(withAmount)
            print(f"New Balance: {balance: .2f}")
+           time.sleep(1)
         elif choice == "3":
             print(f"Current Balance: {balance: .2f}")
+            time.sleep(1)
         elif choice == "4":
             print("Goodbye")
+            time.sleep(1)
             break
         else:
             print("Invalid choice")
+            time.sleep(1)
 
 
 if __name__ == "__main__":
